@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_normal_color">
+
+    <LinearLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvhead"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:scrollbars="none"
+            android:visibility="gone"/>
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="250dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/Progress0"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:src="@mipmap/icon_zero" />-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/gray" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/Progress1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/icon_zero" />-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/gray" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/Progress2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/icon_zero" />-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/gray" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/Progress3"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/icon_zero" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="250dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/dp_5"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="4">-->
+
+        <!--<TextView-->
+        <!--style="@style/text_12sp_black_style"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center"-->
+        <!--android:text="派工" />-->
+
+        <!--<TextView-->
+        <!--style="@style/text_12sp_black_style"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="right"-->
+        <!--android:text="   接收" />-->
+
+        <!--<TextView-->
+        <!--style="@style/text_12sp_black_style"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="right"-->
+        <!--android:text="  上门确认" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tvfSmTaskType"-->
+        <!--style="@style/text_12sp_black_style"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="right"-->
+        <!--android:text="上门放样" />-->
+        <!--</LinearLayout>-->
+        <TextView
+            android:id="@+id/tvfNoProgress"
+            style="@style/text_13sp_gray_style"
+            android:text="暂无进度"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/head"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_round_corner"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:id="@+id/tvfCustomerName"
+                    style="@style/text_15sp_black_style"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:drawableRight="@mipmap/btn_huaxiang" />
+
+
+                <TextView
+                    android:id="@+id/tvfCustomerAddress"
+                    style="@style/text_13sp_black_style"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/tvfCustomerName"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:ellipsize="end"
+                    android:lineSpacingMultiplier="1.05"
+                    android:maxLines="2" />
+
+                <TextView
+                    android:id="@+id/tvfCustomerPhone"
+                    style="@style/text_14sp_black_style"
+                    android:layout_alignParentEnd="true"
+                    android:drawableLeft="@mipmap/icon_call"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_normal_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    style="@style/text_15sp_gray_style"
+                    android:layout_width="120dp"
+                    android:text="任务状态" />
+
+                <TextView
+                    android:id="@+id/tvfTaskStatus"
+                    style="@style/text_14sp_gray_style"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_normal_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    style="@style/text_15sp_gray_style"
+                    android:layout_width="120dp"
+                    android:drawableLeft="@mipmap/icon_gongfen"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:text="工分" />
+
+                <TextView
+                    android:id="@+id/tvfworkpoints"
+                    style="@style/text_14sp_gray_style"
+                    android:textColor="@color/orange" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_normal_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:id="@+id/tvMeasurerT"
+                    style="@style/text_15sp_gray_style"
+                    android:layout_width="120dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="测量员" />
+
+                <TextView
+                    android:id="@+id/tvfMeasurer"
+                    style="@style/text_14sp_black_style" />
+
+                <TextView
+                    android:id="@+id/tvfMeasurerPhone"
+                    style="@style/text_14sp_black_style"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:drawableLeft="@mipmap/icon_call"
+                    android:drawablePadding="@dimen/dp_5" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_normal_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/text_15sp_gray_style"
+                    android:layout_width="120dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="客户需求" />
+
+                <TextView
+                    android:id="@+id/tvfCustomerAsk"
+                    style="@style/text_14sp_black_style"
+                    android:layout_width="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="2" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_normal_color"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:id="@+id/tvfYuyueTimeT"
+                    style="@style/text_15sp_gray_style"
+                    android:layout_width="120dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="预约放样时间" />
+
+                <TextView
+                    android:id="@+id/tvfYuyueTime"
+                    style="@style/text_14sp_black_style"
+                    android:layout_width="match_parent" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_normal_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    style="@style/text_15sp_gray_style"
+                    android:layout_width="120dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="预约描述" />
+
+                <TextView
+                    android:id="@+id/tvfYuyueDesc"
+                    style="@style/text_14sp_black_style"
+                    android:layout_width="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="2" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_normal_color" />
+
+            <LinearLayout
+                android:id="@+id/llfDaiLofting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_12">
+
+                    <TextView
+                        android:id="@+id/tvfSureTimeT"
+                        style="@style/text_15sp_gray_style"
+                        android:layout_width="120dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="确认上门时间" />
+
+                    <TextView
+                        android:id="@+id/tvfSureLoftTime"
+                        style="@style/text_14sp_black_style"
+                        android:layout_width="match_parent"
+                        android:ellipsize="end"
+                        android:maxLines="2" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_normal_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_12">
+
+                    <TextView
+                        style="@style/text_15sp_gray_style"
+                        android:layout_width="120dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="确认上门描述" />
+
+                    <TextView
+                        android:id="@+id/tvfSureLoftDes"
+                        style="@style/text_14sp_black_style"
+                        android:layout_width="match_parent"
+                        android:ellipsize="end"
+                        android:maxLines="2" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/bg_normal_color" />
+
+                <LinearLayout
+                    android:id="@+id/llfFyedDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_12"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/text_15sp_gray_style"
+                        android:layout_width="120dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="放样完成时间" />
+
+                    <TextView
+                        android:id="@+id/tvfLoftedTime"
+                        style="@style/text_14sp_black_style"
+                        android:layout_width="match_parent"
+                        android:ellipsize="end"
+                        android:maxLines="2" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlfReject"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/btn_jsbg"
+            android:gravity="center">
+
+            <TextView
+                style="@style/text_15sp_white_style"
+                android:text="拒收" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlfAccept"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/lccolor"
+            android:gravity="center">
+
+            <TextView
+                style="@style/text_15sp_white_style"
+                android:text="接收" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_imediaterobbing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/lccolor"
+            android:gravity="center">
+
+            <TextView
+                style="@style/text_15sp_white_style"
+                android:text="立即抢单" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_yuyue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/lccolor"
+            android:gravity="center">
+
+            <TextView
+                style="@style/text_15sp_white_style"
+                android:text="确认预约" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_immediatelyFy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/lccolor"
+            android:gravity="center">
+
+            <TextView
+                style="@style/text_15sp_white_style"
+                android:text="立即放样" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

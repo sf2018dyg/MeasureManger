@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevInfor>
+
+    <!-- 如果不需要支持某平台，可缺省该平台的配置-->
+    <!-- 各个平台的KEY仅供DEMO演示，开发者要集成发布需要改成自己的KEY-->
+
+    <SinaWeibo
+        AppKey="2625572020"
+        AppSecret="dbc5d23938cf0cb2b184aab6204e0c6b"
+        RedirectUrl="http://www.fdatacraft.com/Default.aspx"/>
+
+    <QQ
+        AppId="1106763676"
+        AppKey="PgH3QMmkLMs8foPT"/>
+
+    <Wechat
+        AppId="wxc40e16f3ba6ebabc"
+        AppSecret="dcad950cd0633a27e353477c4ec12e7a"/>
+
+</DevInfor>

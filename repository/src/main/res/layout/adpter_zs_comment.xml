@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/com.pkmmte.view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/dp_12"
+    android:paddingTop="8dp"
+    android:paddingRight="@dimen/dp_12"
+    android:layout_marginBottom="8dp">
+
+    <com.soonfor.repository.tools.CircleImageView
+        android:id="@+id/comImageHead"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="5dp"
+        android:src="@mipmap/avatar_default"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="1dp" />
+
+    <TextView
+        android:id="@+id/txtname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/comImageHead"
+        android:textColor="@color/text"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/txtlouceng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtname"
+        android:textColor="@color/text_prompt"
+        android:textSize="9sp"
+        android:layout_below="@+id/txtname"/>
+
+    <TextView
+        android:id="@+id/txtdot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtlouceng"
+        android:text="·"
+        android:textColor="@color/text_prompt"
+        android:textSize="9sp"
+        android:layout_below="@+id/txtname"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txthuifudate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtdot"
+        android:textColor="@color/text_prompt"
+        android:textSize="9sp"
+        android:layout_below="@+id/txtname"/>
+
+    <TextView
+        android:id="@+id/txtcomment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text"
+        android:textSize="12sp"
+        android:layout_below="@+id/comImageHead"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:maxLines="4"
+        android:lineSpacingMultiplier="1.5"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/txtclickhuifu"
+        android:layout_width="52dp"
+        android:layout_height="24dp"
+        android:background="@drawable/bg_button_gray2"
+        android:layout_alignParentEnd="true"
+        android:text="回复"
+        android:textSize="12sp"
+        android:textColor="@color/text_prompt"
+        android:gravity="center"/>
+
+    <View
+        android:id="@+id/view_fenge"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/txtcomment"
+        android:background="@drawable/bg_dotted_line"
+        android:layerType="software"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlvcommentdetail"
+        android:layout_below="@+id/view_fenge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_below="@+id/rlvcommentdetail"
+        android:background="@color/color_fenge"/>
+</RelativeLayout>

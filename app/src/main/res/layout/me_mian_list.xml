@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/white_round_bg">
+
+        <LinearLayout
+            android:id="@+id/llfToMyMessage"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/select_view_bg"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:src="@mipmap/icn_message" />
+
+            <TextView
+                style="@style/text_14sp_black_style"
+                android:layout_gravity="left|center_vertical"
+                android:text="我的消息" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/ivfMyMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:src="@mipmap/icn_next" />
+
+                <TextView
+                    android:id="@+id/tvfMsgNum"
+                    style="@style/text_12sp_black_style"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/ivfMyMessage"
+                    android:background="@drawable/bg_num_red"
+                    android:ellipsize="end"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:text="4"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.6"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/llfToMyCase"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/select_view_bg"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:padding="14dp"
+                android:src="@mipmap/icn_anli" />
+
+            <TextView
+                style="@style/text_14sp_black_style"
+                android:layout_gravity="left|center_vertical"
+                android:text="我的案例" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:src="@mipmap/icn_next" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.6"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/llfToMyWork"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/select_view_bg"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:padding="14dp"
+                android:src="@mipmap/icn_work" />
+
+            <TextView
+                style="@style/text_14sp_black_style"
+                android:layout_gravity="left|center_vertical"
+                android:text="我的工作" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:src="@mipmap/icn_next" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.6"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/llfToMyCollect"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/select_view_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:padding="14dp"
+                android:src="@mipmap/icn_shouchang" />
+
+            <TextView
+                style="@style/text_14sp_black_style"
+                android:layout_gravity="left|center_vertical"
+                android:text="我的收藏" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:src="@mipmap/icn_next" />
+            </RelativeLayout>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.6"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/llfToMyAttention"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/select_view_bg"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:adjustViewBounds="true"
+                android:padding="14dp"
+                android:src="@mipmap/icn_guanzhu" />
+
+            <TextView
+                style="@style/text_14sp_black_style"
+                android:layout_gravity="left|center_vertical"
+                android:text="我的关注" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:src="@mipmap/icn_next" />
+            </RelativeLayout>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.6"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/llfToRepository"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/select_view_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:adjustViewBounds="true"
+                android:padding="14dp"
+                android:src="@mipmap/repository_icon" />
+
+            <TextView
+                style="@style/text_14sp_black_style"
+                android:layout_gravity="left|center_vertical"
+                android:text="知识库" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:src="@mipmap/icn_next" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_12">
+
+    <LinearLayout
+        android:id="@+id/llfanniu"
+        android:layout_width="129dp"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_round_corner"
+        android:padding="@dimen/dp_12"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/anniuicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/icn_liangchi01"/>
+
+        <TextView
+            android:id="@+id/anniutxt"
+            style="@style/text_12sp_black_style"
+            android:layout_marginTop="@dimen/dp_12"
+            android:text="开始测量"/>
+
+    </LinearLayout>
+</RelativeLayout>

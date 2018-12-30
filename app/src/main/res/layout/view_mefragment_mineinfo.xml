@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/bg"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgfSet"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:adjustViewBounds="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/btn_shezhi"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"/>
+        <ImageView
+            android:id="@+id/imgfMingPian"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/btn_mingpian"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/llfBaseInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dp_16">
+
+        <com.soonfor.measuremanager.view.RoundImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="12dp"
+            android:padding="@dimen/dp_2"
+            android:scaleType="fitCenter"
+            android:src="@drawable/avatar_default" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="@dimen/dp_12"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/text_15sp_white_style"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp">
+                <TextView
+                    android:id="@+id/tvfCity"
+                    style="@style/text_12sp_gray_style"
+                    android:textColor="@color/white"/>
+                <ImageView
+                    android:id="@+id/imgfWLine"
+                    android:layout_width="1dp"
+                    android:layout_height="14sp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/tv_storeName"
+                    style="@style/text_12sp_gray_style"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/mRbClass"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:layout_width="60dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="1dp"
+                    android:numStars="5"
+                    android:stepSize="0.5"
+                    android:isIndicator="true"
+                    android:progressTint="@color/red"
+                    android:backgroundTint="@color/text_prompt"/>
+                <TextView
+                    android:id="@+id/tvfClassName"
+                    style="@style/width_height_default"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linear_work_points"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_12sp_black_style"
+                android:drawableLeft="@mipmap/icon_gongfen"
+                android:drawablePadding="4dp"
+                android:text="工分" />
+
+            <TextView
+                android:id="@+id/tv_work_points"
+                style="@style/text_12sp_black_style"
+                android:layout_marginLeft="4dp"
+                android:text="0" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:background="@color/fycoloradpter"
+            android:layout_gravity="center_vertical"/>
+
+        <LinearLayout
+            android:id="@+id/linear_growth"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_12sp_black_style"
+                android:drawableLeft="@mipmap/icon_chengzhangzhi"
+                android:drawablePadding="4dp"
+                android:text="成长值" />
+
+            <TextView
+                android:id="@+id/tv_growth"
+                style="@style/text_12sp_black_style"
+                android:layout_marginLeft="4dp"
+                android:text="0" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:background="@color/fycoloradpter"/>
+
+        <LinearLayout
+            android:id="@+id/linear_my_performance"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_12sp_black_style"
+                android:drawableLeft="@mipmap/icon_jixiao"
+                android:drawablePadding="4dp"
+                android:text="绩效" />
+
+            <TextView
+                android:id="@+id/tv_performance"
+                style="@style/text_12sp_black_style"
+                android:layout_marginLeft="4dp"
+                android:text="0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

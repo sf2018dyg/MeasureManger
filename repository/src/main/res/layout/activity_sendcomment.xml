@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+    <ImageView
+        android:id="@+id/image_kong"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llfContent"
+        android:background="@color/transparent"/>
+
+    <LinearLayout
+        android:id="@+id/llfContentdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_normal_color"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etfSend"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_120"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@color/white"
+            android:gravity="left|top"
+            android:hint="请输入内容！"
+            android:textColorHint="@color/text_gray"
+            android:padding="@dimen/dp_5"
+            android:textSize="@dimen/dp_14"
+            android:textColor="@color/text"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/bg_normal_color"
+            android:paddingLeft="@dimen/dp_12"
+            android:paddingRight="@dimen/dp_12">
+
+            <LinearLayout
+                android:id="@+id/llfComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/mbfSend"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="5"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/readingVolume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/readingVolumetxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/read"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/text_prompt"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="0.6dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/text_prompt"></View>
+
+                <RelativeLayout
+                    android:id="@+id/commotVolume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/commotVolumetxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/comment"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/text_prompt"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.6dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/text_prompt"></View>
+
+                <RelativeLayout
+                    android:id="@+id/thumbsupVolume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/thumbsupVolumetxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/support"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/text_prompt"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="0.6dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/text_prompt"></View>
+
+                <RelativeLayout
+                    android:id="@+id/collectionVolume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/collectionVolumetxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/collect"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/text_prompt"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/mbfSend"
+                android:layout_width="66dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_button_select"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="发表"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

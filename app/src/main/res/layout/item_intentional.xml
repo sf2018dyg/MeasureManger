@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlfimgpath"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/button_jushou_bg">
+
+        <com.soonfor.measuremanager.view.RoundJiaoImageView
+            android:id="@+id/imgpath"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/zanuw"
+            app:typee="round" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rlfimgpath"
+        android:layout_alignTop="@+id/rlfimgpath"
+        android:layout_toEndOf="@+id/rlfimgpath">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/text_15sp_black_style"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:text="" />
+
+        <LinearLayout
+            android:id="@+id/llfsize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/title"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TopPostsDesc"
+                android:text="长宽高:"/>
+
+            <TextView
+                android:id="@+id/specifical"
+                style="@style/TopPostsDesc"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llfcolor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/llfsize"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TopPostsDesc"
+                android:text="颜色:"/>
+
+            <TextView
+                android:id="@+id/color"
+                style="@style/TopPostsDesc"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llftexture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/llfcolor"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TopPostsDesc"
+                android:text="材质:"/>
+
+            <TextView
+                android:id="@+id/texture"
+                style="@style/TopPostsDesc"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/price"
+                style="@style/TopPostsDescRed"
+                android:text="0.00" />
+
+            <TextView
+                style="@style/TopPostsDescRed"
+                android:text="/" />
+
+            <TextView
+                android:id="@+id/unit"
+                style="@style/TopPostsDescRed"
+                android:text="pcs" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/num"
+            style="@style/TopPostsDescRed"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/dp_12"
+            android:text="x1" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/lines"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/rlfimgpath"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_12"
+        android:background="@drawable/bg_dotted_line"
+        android:layerType="software" />
+</RelativeLayout>

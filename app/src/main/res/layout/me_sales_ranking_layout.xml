@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/white_round_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/red" />
+
+            <TextView
+                style="@style/width_height_default"
+                android:layout_marginLeft="8dp"
+                android:text="门店销售排行榜"
+                android:textColor="@color/black" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <com.soonfor.measuremanager.view.RoundImageView
+                    android:id="@+id/left_avatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/tv_1"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/avatar_default"/>
+
+                <TextView
+                    android:id="@+id/tv_sales_left_ranking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/user_rank"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/sales_left_layout"
+                    android:gravity="center"
+                    android:text="第5名"/>
+
+                <LinearLayout
+                    android:id="@+id/sales_left_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/left_avatar"
+                    android:layout_marginTop="8dp"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_prompt"
+                        android:text="销售额"/>
+
+                    <TextView
+                        android:id="@+id/tv_sales_left_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:textColor="@color/red"
+                        android:text="¥3600"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="我"
+                    android:textColor="@color/text"
+                    android:layout_centerHorizontal="true"/>
+
+                <com.soonfor.measuremanager.view.RoundImageView
+                    android:id="@+id/me_avatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/tv_2"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/avatar_default"/>
+
+                <TextView
+                    android:id="@+id/tv_sales_me_ranking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/user_rank"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/sales_me_layout"
+                    android:gravity="center"
+                    android:text="第5名"/>
+
+                <LinearLayout
+                    android:id="@+id/sales_me_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/me_avatar"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_prompt"
+                        android:text="销售额"/>
+
+                    <TextView
+                        android:id="@+id/tv_sales_me_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="4dp"
+                        android:text="¥3600"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <com.soonfor.measuremanager.view.RoundImageView
+                    android:id="@+id/right_avatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/tv_3"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/avatar_default"/>
+
+                <TextView
+                    android:id="@+id/tv_sales_right_ranking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/user_rank"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/sales_right_layout"
+                    android:gravity="center"
+                    android:text="第5名"/>
+
+                <LinearLayout
+                    android:id="@+id/sales_right_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/right_avatar"
+                    android:layout_marginTop="8dp"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_prompt"
+                        android:text="销售额"/>
+
+                    <TextView
+                        android:id="@+id/tv_sales_right_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="4dp"
+                        android:text="¥3600"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvhead"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:scrollbars="none"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tvfNoProgress"
+            style="@style/text_13sp_gray_style"
+            android:text="暂无进度"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imgfLine"
+        android:layout_below="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/bg_color"/>
+
+    <ScrollView
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/imgfLine"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_round_corner"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    android:id="@+id/tvfCustomerName"
+                    style="@style/text_15sp_black_style"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:drawableRight="@mipmap/btn_huaxiang" />
+
+
+                <TextView
+                    android:id="@+id/tvfCustomerAddress"
+                    style="@style/text_13sp_black_style"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/tvfCustomerName"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:ellipsize="end"
+                    android:lineSpacingMultiplier="1.05"
+                    android:maxLines="2" />
+
+                <TextView
+                    android:id="@+id/tvfCustomerPhone"
+                    style="@style/text_14sp_black_style"
+                    android:layout_alignParentEnd="true"
+                    android:drawableLeft="@mipmap/icon_call"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_normal_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    style="@style/text_15sp_gray_style"
+                    android:layout_width="120dp"
+                    android:text="任务状态" />
+
+                <TextView
+                    android:id="@+id/tvfTaskStatus"
+                    style="@style/text_14sp_gray_style"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_normal_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    style="@style/text_15sp_gray_style"
+                    android:layout_width="120dp"
+                    android:drawableLeft="@mipmap/icon_gongfen"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:text="工分" />
+
+                <TextView
+                    android:id="@+id/tvfworkpoints"
+                    style="@style/text_14sp_gray_style"
+                    android:textColor="@color/orange" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_normal_color" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    style="@style/text_15sp_gray_style"
+                    android:layout_width="120dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="客户需求" />
+
+                <TextView
+                    android:id="@+id/tvfCustomerAsk"
+                    style="@style/text_14sp_black_style"
+                    android:layout_width="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="2" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_normal_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    style="@style/text_15sp_gray_style"
+                    android:layout_width="120dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="方案沟通时间" />
+
+                <TextView
+                    android:id="@+id/tvfFaGtTime"
+                    style="@style/text_14sp_black_style"
+                    android:layout_width="match_parent" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_normal_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <TextView
+                    style="@style/text_15sp_gray_style"
+                    android:layout_width="120dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="备注说明" />
+
+                <TextView
+                    android:id="@+id/tvfRemarkDesc"
+                    style="@style/text_14sp_black_style"
+                    android:layout_width="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="2" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_normal_color" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlfReject"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/btn_jsbg"
+            android:gravity="center">
+
+            <TextView
+                style="@style/text_15sp_white_style"
+                android:text="拒收" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlfAccept"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/lccolor"
+            android:gravity="center">
+
+            <TextView
+                style="@style/text_15sp_white_style"
+                android:text="接收" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_imediaterobbing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/lccolor"
+            android:gravity="center">
+
+            <TextView
+                style="@style/text_15sp_white_style"
+                android:text="立即抢单" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_sure"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/lccolor"
+            android:gravity="center">
+
+            <TextView
+                style="@style/text_15sp_white_style"
+                android:text="客户确图" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/pic01"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#88000000"/>
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#00000000"
+                android:paddingTop="26dp">
+
+                <RelativeLayout
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivfLeft"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="12dp"
+                        android:layout_gravity="left"
+                        android:src="@mipmap/return_arrow" />
+
+                    <ImageView
+                        android:id="@+id/imgfNews"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:padding="10dp"
+                        android:src="@mipmap/news1" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="12dp"
+                    android:layout_marginBottom="24dp">
+
+                    <com.soonfor.repository.tools.CircleImageView
+                        android:id="@+id/civfHead"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="26dp"
+                        android:src="@mipmap/avatar_default"
+                        app:civ_border_color="@color/transparent"
+                        app:civ_border_width="0dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvfSName"
+                            style="@style/text_15sp_white_style"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tvfStation"
+                            style="@style/text_14sp_black_style"
+                            android:layout_alignBottom="@+id/tvfSName"
+                            android:layout_marginLeft="6dp"
+                            android:layout_toRightOf="@+id/tvfSName"
+                            android:textColor="@color/orange"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:id="@+id/llfMyFavourite"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/select_view_bg"
+            android:orientation="horizontal"
+            android:paddingRight="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="14dp"
+                android:src="@mipmap/user_menu_collect" />
+
+            <TextView
+                style="@style/text_14sp_gray_style"
+                android:layout_gravity="left|center_vertical"
+                android:text="我的收藏" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:src="@mipmap/icn_next" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <ImageView
+            style="@style/line_gray_style"
+            android:layout_width="match_parent"
+            android:background="@color/bg_color" />
+        <LinearLayout
+            android:id="@+id/llfMyAddedKnowledge"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/select_view_bg"
+            android:orientation="horizontal"
+            android:paddingRight="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="14dp"
+                android:src="@mipmap/user_menu_knowledge" />
+
+            <TextView
+                style="@style/text_14sp_gray_style"
+                android:layout_gravity="left|center_vertical"
+                android:text="我添加的知识" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:src="@mipmap/icn_next" />
+            </RelativeLayout>
+        </LinearLayout>
+        <ImageView
+            style="@style/line_gray_style"
+            android:layout_width="match_parent"
+            android:background="@color/bg_color" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

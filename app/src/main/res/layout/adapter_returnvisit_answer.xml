@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/llfAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_6"
+        android:paddingLeft="@dimen/dp_12"
+        android:paddingRight="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_6">
+        <ImageView
+            android:id="@+id/imgfCheck"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/check_select"
+            android:enabled="false"
+            />
+        <TextView
+            android:id="@+id/tvfAnswer"
+            style="@style/text_14sp_black_style"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_gravity="center_vertical"
+            android:text="服务跳读服务跳读服"
+            />
+    </LinearLayout>
+
+</LinearLayout>

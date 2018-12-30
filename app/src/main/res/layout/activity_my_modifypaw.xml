@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:contentInsetStart="0dp"
+        app:titleTextColor="@android:color/white">
+
+        <ImageView
+            android:id="@+id/ivfLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@color/colorPrimary"
+            android:src="@mipmap/btn_back" />
+
+        <ImageView
+            android:id="@+id/ivMiddle"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/ivfLeft"
+            android:background="#999999" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/ivMiddle"
+            android:paddingLeft="14dp"
+            android:paddingRight="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tvfTitile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="修改密码"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <com.soonfor.measuremanager.view.ClearEditText
+        android:id="@+id/etfOldPaw"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_44"
+        android:layout_below="@+id/ll1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:hint="请输入原密码"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:maxLength="100"
+        android:textColor="@color/text"
+        android:textSize="14sp"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:background="@drawable/vp_item_bg_lee"
+        />
+
+    <com.soonfor.measuremanager.view.ClearEditText
+        android:id="@+id/etfNewPaw"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_44"
+        android:layout_below="@+id/ll1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@drawable/vp_item_bg_lee"
+        android:hint="请输入新密码"
+        android:inputType="textPassword"
+        android:maxLength="30"
+        android:singleLine="true"
+        android:textColor="@color/text"
+        android:textSize="14sp"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"/>
+
+    <EditText
+        android:id="@+id/etfVerifyNewPaw"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_44"
+        android:layout_below="@+id/ll1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@drawable/vp_item_bg_lee"
+        android:hint="请再次输入新密码"
+        android:inputType="textPassword"
+        android:maxLength="30"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10" />
+
+    <Button
+        android:id="@+id/bt_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_red"
+        android:layout_margin="20dp"
+        android:text="保存"
+        android:textSize="15sp"/>
+
+</LinearLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/com.pkmmte.view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dp_12"
+    android:paddingRight="@dimen/dp_12"
+    android:paddingLeft="@dimen/dp_12">
+
+    <RelativeLayout
+        android:id="@+id/rlfitem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/imgcover"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/zanuw" />
+
+        <RelativeLayout
+            android:layout_width="92dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_12"
+            android:visibility="invisible"
+            android:background="@drawable/white_round_bg_touming96">
+
+            <com.pkmmte.view.CircularImageView
+                android:id="@+id/ivhead"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/default_s"
+                app:selector="true"
+                app:selector_color="#4D000000"
+                app:selector_stroke_color="#16f5f5f5"
+                app:selector_stroke_width="8dp"
+                app:shadow="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_toEndOf="@+id/ivhead"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/designerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="--"
+                    android:textColor="@color/text"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/postDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="--"
+                    android:textColor="@color/text_prompt"
+                    android:textSize="9sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lltitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imgcover"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_12"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="--"
+                android:textColor="@color/text"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="--"
+                android:textColor="@color/text_prompt"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewspace"
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_below="@+id/lltitle"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:background="@color/space_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_below="@+id/viewspace"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/readingVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/readingVolumetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_eye"
+                    android:drawablePadding="5dp"
+                    android:text="0"
+                    android:textColor="@color/text_prompt"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="0.6dp"
+                android:layout_height="15dp"
+                android:background="@color/space_line"></View>
+
+            <RelativeLayout
+                android:id="@+id/replyVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/replyVolumetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icn_pinglun"
+                    android:drawablePadding="5dp"
+                    android:text="0"
+                    android:textColor="@color/text_prompt"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0.6dp"
+                android:layout_height="15dp"
+                android:background="@color/space_line"></View>
+
+            <RelativeLayout
+                android:id="@+id/thumbsupVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/thumbsupVolumetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icn_good"
+                    android:drawablePadding="5dp"
+                    android:text="0"
+                    android:textColor="@color/text_prompt"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

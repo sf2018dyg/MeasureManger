@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:background="@drawable/vp_item_bg"
+        android:elevation="3dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="自定义画像"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/edt_spopinion_detial"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/background_enclosure"
+            android:enabled="true"
+            android:hint="请输入画像"
+            android:textColor="@color/text"
+            android:textColorHint="@color/c7c7c7"
+            android:layout_below="@+id/title"
+            android:padding="@dimen/dp_10"
+            android:gravity="top|left"
+            android:singleLine="false"
+            android:textSize="15sp"
+            android:cursorVisible="true"
+            android:layout_alignParentStart="true"
+            android:maxLength="100"
+            android:layout_marginLeft="8.5dp"
+            android:layout_marginRight="8.5dp"/>
+
+        <TextView
+            android:id="@+id/txtHint"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="注: 多个画像可用空格隔开"
+            android:textSize="14sp"
+            android:textColor="@color/text"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_below="@+id/edt_spopinion_detial"/>
+
+
+        <LinearLayout
+            android:id="@+id/bottom_btns"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_below="@+id/txtHint"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:layout_marginBottom="2.5dp"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/rl_spcancl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:background="@drawable/bg_round_gray_btn3"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tv_spcancl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="取消"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/rl_spconfirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:background="@drawable/bg_round_red_btn"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tv_spconfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确定"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

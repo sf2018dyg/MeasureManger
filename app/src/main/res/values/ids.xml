@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="lastpic_key" type="id" />
+    <item name="nextpic_key" type="id" />
+    <item name="imgurls_key" type="id" />
+    <item name="imgurls_posi_key" type="id" />
+    <item name="show_wall_key" type="id" />
+    <item name="item_id" type="id" />
+    <item name="item_id_d" type="id" />
+    <item name="item_id_p" type="id" />
+    <item name="item_voice" type="id"/>
+    <item name="item_voice_time" type="id"/>
+</resources>

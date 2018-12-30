@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:id="@+id/llfTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include layout="@layout/view_qui_title_layout" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tab_layout"
+        android:layout_below="@+id/llfTop"
+        android:visibility="gone" />
+
+    <!--<com.soonfor.repository.tools.tablayout.NoScrollViewPager-->
+    <!--android:id="@+id/viewpager"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_above="@+id/imgfGedang"-->
+    <!--android:layout_below="@+id/llfTop" />-->
+    <RelativeLayout
+        android:id="@+id/rlfFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/imgfGedang"
+        android:layout_below="@+id/llfTop"
+        android:background="@color/white"/>
+        />
+    <ImageView
+        android:id="@+id/imgfGedang"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_above="@+id/tab_layout"
+        android:background="@color/color_fenge" />
+
+    <com.soonfor.repository.tools.tablayout.MTabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_color_darkgray" />
+</RelativeLayout>

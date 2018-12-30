@@ -1,0 +1,157 @@
+{
+    "errorCode":0,
+    "errorMessage":"",
+    "result":{
+    	"packages":[{
+			"packageNo":"spu1", 
+            "forRoom":["厨房"],
+            "name":"厨房简装套餐1",
+			"desc":"厨房简装套餐",
+			"price":98000.0,
+            "thumb":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+            "img":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+			"spus":[
+                    {"spu":"spu1000", "num":1},
+                    {"spu":"spu1001", "num":2},
+                    {"spu":"spu1003", "num":2},
+                    {"spu":"spu1004", "num":2},
+                    {"spu":"0757-SSPU-0013", "num":1},
+                    {"spu":"0757-SSPU-0014", "num":1},
+                    {"spu":"0757-SSPU-0015", "num":1}
+                ]
+            },
+            {
+			"packageNo":"spu2", 
+            "forRoom":["主卫"],
+            "name":"主卫套餐包2",
+            "desc":"主卫套餐包",
+            "price":38000.0,
+            "thumb":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+            "img":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+			"spus":[
+                    {"spu":"0757-SSPU-0001", "num":1},
+                    {"spu":"0757-SSPU-0004", "num":1},
+                    {"spu":"0757-SSPU-0003", "num":1},
+                    {"spu":"0757-SSPU-0013", "num":1},
+                    {"spu":"0757-SSPU-0014", "num":1},
+                    {"spu":"0757-SSPU-0015", "num":1}
+			]
+        },
+		{
+			"packageNo":"spu3", 
+            "forRoom":["次卫"],
+            "name":"次卫套餐包3",
+            "desc":"卫生间套餐包",
+            "price":38000.0,
+            "thumb":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+            "img":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+			"spus":[
+                    {"spu":"0757-SSPU-0001", "num":1},
+                    {"spu":"0757-SSPU-0004", "num":1},
+                    {"spu":"0757-SSPU-0013", "num":1},
+                    {"spu":"0757-SSPU-0014", "num":1},
+                    {"spu":"0757-SSPU-0015", "num":1}
+			]
+        }
+	],
+    "spus":[{
+		"spu":"spu1000",
+        "spuType":"model",
+		"name":"双门地柜",
+		"desc":"sdfghjkl",
+		"thumb":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+		"price":500.0,
+		"forRoom":["厨房"],
+		"defaultSelected":false
+	}
+	,{
+		"spu":"spu1001",
+        "spuType":"model",
+		"name":"单门地柜",
+		"desc":"wertyuio",
+		"thumb":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+		"price":500.0,
+		"forRoom":["厨房"],
+		"defaultSelected":false
+	}
+            ,{
+            "spu":"spu1003",
+            "spuType":"model",
+            "name":"开放格吊柜",
+            "desc":"wertyuio",
+            "thumb":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+            "price":500.0,
+            "forRoom":["厨房"],
+            "defaultSelected":false
+            }
+            ,{
+            "spu":"spu1004",
+            "spuType":"model",
+            "name":"左开门吊柜",
+            "desc":"wertyuio",
+            "thumb":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+            "price":500.0,
+            "forRoom":["厨房"],
+            "defaultSelected":false
+            }
+	,{
+		"spu":"0757-SSPU-0001",
+        "spuType":"model",
+		"name":"马桶",
+		"desc":"zxcvbnm",
+		"thumb":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+		"price":500.0,
+		"forRoom":["主卫","次卫"],
+		"defaultSelected":false
+	}
+	,{
+		"spu":"0757-SSPU-0003",
+        "spuType":"model",
+		"name":"浴室柜",
+		"desc":"asdfghjk",
+		"thumb":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+		"price":500.0,
+		"forRoom":["主卫","次卫"],
+		"defaultSelected":false
+	}
+	,{
+		"spu":"0757-SSPU-0004",
+        "spuType":"model",
+		"name":"花洒",
+		"desc":".,mnbvc",
+		"thumb":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+		"price":500.0,
+		"forRoom":["主卫","次卫"],
+		"defaultSelected":false
+	}
+            ,{
+            "spu":"0757-SSPU-0013",
+            "spuType":"room_wallface",
+            "name":"墙砖铺贴",
+            "desc":".,mnbvc",
+            "thumb":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+            "price":500.0,
+            "forRoom":["主卫","次卫"],
+            "defaultSelected":true
+            },{
+            "spu":"0757-SSPU-0014",
+            "spuType":"room_floor",
+            "name":"地砖铺贴",
+            "desc":".,mnbvc",
+            "thumb":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+            "price":500.0,
+            "forRoom":["主卫","次卫"],
+            "defaultSelected":true
+            },{
+            "spu":"0757-SSPU-0015",
+            "spuType":"room_service",
+            "name":"地面找平",
+            "desc":".,mnbvc",
+            "thumb":"http://tg.kkzhuang.com/download_ia11/stock_preview/image/nopic.jpg",
+            "price":500.0,
+            "forRoom":["主卫","次卫"],
+            "defaultSelected":true
+            }
+	]
+}
+}

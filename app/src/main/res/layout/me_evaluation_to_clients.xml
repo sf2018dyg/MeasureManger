@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llfToEvaluation_i_to_clients"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:paddingRight="14dp"
+        android:background="@drawable/white_round_bg"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvfLegt"
+                android:layout_width="4dp"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_height="18dp"
+                android:background="@color/red"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                style="@style/width_height_default"
+                android:layout_marginLeft="8dp"
+                android:text="我对客户的评价"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/tvfLegt"
+                android:textSize="@dimen/sp_16"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tvfEvalNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_red"
+                    android:textSize="14sp"
+                    android:text="待评价:0"
+                    android:layout_marginRight="8dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icn_next"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

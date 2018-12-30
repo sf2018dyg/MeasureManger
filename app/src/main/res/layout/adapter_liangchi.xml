@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llfItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_select_item_bg"
+        android:descendantFocusability="blocksDescendants">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvfTaskType"
+                    style="@style/text_13sp_black_style"
+                    android:layout_centerVertical="true"
+                    android:background="@color/red"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:text="量尺"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    style="@style/text_14sp_black_style"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@+id/tvfTaskType"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:drawableRight="@mipmap/btn_huaxiang"
+                    android:maxLength="16"
+                    android:textColor="@color/text" />
+
+                <RelativeLayout
+                    android:id="@+id/rlfChangePhoto"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_toRightOf="@+id/tvName"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_pic"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"
+                        android:background="@mipmap/btn_huaxiang" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/tvftypes"
+                        style="@style/text_14sp_gray_style"
+                        android:text="待抢单"
+                        android:textColor="@color/lccolor" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="16sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@mipmap/icon_next" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/line_gray_style"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingEnd="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toLeftOf="@+id/flQiang"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/text_13sp_gray_style"
+                            android:text="楼盘：" />
+
+                        <TextView
+                            android:id="@+id/tvfBuilding"
+                            style="@style/text_13sp_black_style"
+                            android:ellipsize="end"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/text_13sp_gray_style"
+                            android:text="预约时间：" />
+
+                        <TextView
+                            android:id="@+id/tvfYYDate"
+                            style="@style/text_13sp_black_style"
+                            android:ellipsize="end"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvfAddressT"
+                            style="@style/text_13sp_gray_style"
+                            android:text="地址：" />
+
+                        <TextView
+                            android:id="@+id/tvfAddress"
+                            style="@style/text_13sp_black_style"
+                            android:ellipsize="end"
+                            android:maxLines="2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/qrsmsj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvfconfirmtimes"
+                            style="@style/text_13sp_gray_style"
+                            android:text="确认上门量尺时间：" />
+
+                        <TextView
+                            android:id="@+id/tvfconfirmtime"
+                            style="@style/text_13sp_red_style"
+                            android:ellipsize="end"
+                            android:maxLines="2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lcwcsj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvfliangchifinishtimes"
+                            style="@style/text_13sp_gray_style"
+                            android:text="量尺完成时间：" />
+
+                        <TextView
+                            android:id="@+id/tvfliangchifinishtime"
+                            style="@style/text_13sp_red_style"
+                            android:ellipsize="end"
+                            android:maxLines="2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/line_gray_style"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp" />
+
+            <RelativeLayout
+                android:id="@+id/llfbtnbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dp_2"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/icon_gongfen" />
+
+                    <TextView
+                        style="@style/text_14sp_gray_style"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:text="工分"
+                        android:textColor="@color/fycolor" />
+
+                    <TextView
+                        android:id="@+id/tvfWorkpoints"
+                        style="@style/text_14sp_gray_style"
+                        android:textColor="@color/fycolor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llfbtnbarright"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_2"
+                    android:layout_marginRight="@dimen/dp_2"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/jushou"
+                        style="@style/adpter_btn_jushou" />
+
+                    <Button
+                        android:id="@+id/jieshou"
+                        style="@style/adpter_btn_jieshou" />
+
+                    <Button
+                        android:id="@+id/querenyuyue"
+                        style="@style/adpter_btn_querenyuyue" />
+
+                    <Button
+                        android:id="@+id/lijiliangchi"
+                        style="@style/adpter_btn_lijiliangchi" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,193 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 27
+    useLibrary 'org.apache.http.legacy' //asynchttp网络请求包
+    defaultConfig {
+        applicationId "com.soonfor.measuremanager"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 28
+        versionName "1.3.4"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        packagingOptions {//加上这代码解决多各INF冲突
+            pickFirst 'META-INF/*'
+        }
+        ndk {
+            moduleName "mjsdk"
+            stl "c++_static"
+
+            //for debug
+            //abiFilters "armeabi"
+            //for release
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86"
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+        /* manifestPlaceholders = [
+                JSHARE_PKGNAME : applicationId,
+                JPUSH_APPKEY : "4ea5c27dac0aebca5646aff4", //极光控制台创建应用得到的 AppKey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+                TENCENT_APPID: "1106686969",//腾讯开放平台注册应用得到的 appId
+        ]*/
+        tasks.withType(JavaCompile) {
+            options.encoding = "UTF-8"
+        }
+        multiDexEnabled true
+    }
+    signingConfigs {
+        release {
+            storeFile file("MeasureManager.jks")
+            storePassword "123456"
+            keyAlias "设计岛"
+            keyPassword "123456"
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    lintOptions { //防止打包时XML文件报错
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+
+    //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+
+    //业务模块
+    implementation project(':dynamicpicpro')
+    implementation project(':repository')
+    implementation project(':mjsdk')
+
+    //网络请求包
+    implementation 'com.loopj.android:android-async-http:1.4.8'
+
+    //gson 解析
+    implementation 'com.google.code.gson:gson:2.8.0'
+
+    //图片选择器
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+
+    //二维码扫描
+    implementation 'com.journeyapps:zxing-android-embedded:3.3.0'
+
+    //下拉刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-7'
+
+    //图片加载
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    //qmui
+    implementation 'com.qmuiteam:qmui:1.0.4'
+
+    //butterknife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //透明状态栏
+
+    // implementation 'com.jaeger.statusbarutil:library:1.4.0'
+
+    //路由
+    implementation 'com.alibaba:arouter-api:1.3.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+
+    //flowlayout
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+
+    //list Item侧滑删除、拖拽
+    implementation 'com.yanzhenjie:recyclerview-swipe:1.1.4'
+
+    //LoadingDialog加载
+    implementation 'com.github.gittjy:LoadingDialog:1.0.2'
+
+    //日期地址选择
+    implementation 'com.contrarywind:Android-PickerView:3.2.7'
+
+    //view 的角标，可以定义 参考:https://github.com/qstumn/BadgeView
+    implementation 'q.rorbin:badgeview:1.1.3'
+
+    //圆形头像
+    implementation 'com.pkmmte.view:circularimageview:1.1'
+
+    //qq微博的九宫格
+    implementation 'com.lzy.widget:ninegridview:0.2.1'
+
+    //Sharepreferences
+    implementation 'com.orhanobut:hawk:2.0.1'
+
+    //    //极光推送
+
+    //    implementation files('libs/jcore-android-1.1.9.jar')
+
+    //    implementation files('libs/jshare-android-1.5.0.jar')
+
+    //    implementation files('libs/jshare-qq-android-1.5.0.jar')
+
+    //    implementation files('libs/jshare-sina-android-1.5.0.jar')
+
+    //    implementation files('libs/jshare-wechat-android-1.5.0.jar')
+
+    //多包
+    implementation 'com.android.support:multidex:1.0.2'
+
+    //控件阴影
+    implementation 'com.github.KiWiLss:ShadowLayout:0.0.1'
+    implementation 'com.baoyz.swipemenulistview:library:1.3.0'
+    implementation 'com.jiechic.library:xUtils:2.6.14'
+
+    //日志框架
+    implementation 'com.github.hijesse:android-logger:2.0.0'
+
+    //动态申请权限
+    implementation 'com.github.dfqin:grantor:2.5'
+
+    //消息总线
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    //假沉浸式
+    implementation('com.github.niorgai:StatusBarCompat:2.1.2', {
+        exclude group: 'com.android.support'
+    })
+
+    //星星
+    implementation 'me.zhanghai.android.materialratingbar:library:1.3.1'
+    implementation files('libs/AMap_Location_V4.1.0_20180619.jar')
+
+    //缩放图片
+    implementation 'com.bm.photoview:library:1.4.1'
+    implementation files('libs/libjmm.jar')
+}

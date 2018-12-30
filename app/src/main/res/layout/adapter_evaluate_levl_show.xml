@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/dp_12">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tvfEvalObj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:text=""
+            android:textColor="@color/text_prompt"
+            android:textSize="@dimen/sp_13" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.75"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                android:id="@+id/mRatingBar_Attitude"
+                style="@style/Widget.MaterialRatingBar.RatingBar"
+                android:layout_width="130dp"
+                android:layout_height="24dp"
+                android:numStars="5"
+                android:stepSize="1"
+                android:isIndicator="true"
+                android:progressTint="@color/red"
+                android:backgroundTint="@color/text_prompt"/>
+            <TextView
+                android:id="@+id/tvfAttitudePoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/red"
+                android:textSize="@dimen/sp_13" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvfAttitudeDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_2"
+            android:layout_marginTop="4dp"
+            android:text=""
+            android:textColor="@color/orange"
+            android:textSize="@dimen/sp_13" />
+    </LinearLayout>
+
+</LinearLayout>

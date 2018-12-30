@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 顶栏灰色-->
+    <color name="colorPrimary">#666666</color>
+    <color name="colorPrimaryDark">#666666</color>
+    <color name="colorAccent">#999999</color>
+    <color name="hinttxt">#c0c0c0</color>
+    <color name="white">#fff</color>
+    <color name="transparent">#00000000</color>
+    <color name="ToobarColor">#666666</color>
+    <color name="bg_color">#f2f2f2</color>
+    <color name="bg_color_darkgray">#FCFCFC</color>
+    <color name="color_fenge">#e2e2e2</color>
+    <color name="text">#333333</color>
+    <color name="text_prompt">#888888</color>
+    <color name="text_gray">#AEAEAE</color>
+    <color name="text_red">#DA3848</color>
+    <color name="caveat">#ff4500</color>
+    <color name="gray">#cccccc</color>
+    <color name="gray2">#8b99a4</color>
+    <color name="red">#EB433A</color>
+    <color name="darkred">#CD3333</color>
+    <color name="black">#000000</color>
+    <color name="green">#28ce33</color>
+    <color name="blue">#4499F4</color>
+    <color name="yellow">#FFAA3B</color>
+    <color name="orange">#FF8C00</color>
+    <color name="fycolor">#FF8C00</color>
+
+
+    <color name="shenhezhong">#ff8321</color>
+    <color name="shenhebutong">#eb433a</color>
+    <color name="shenhetong">#2dcf2d</color>
+
+    <color name="bg_normal_color">#f0f0f0</color>
+    <color name="line">#e1e1e1</color>
+    <color name="space_line">#f2f2f2</color>
+    <color name="spaceLines">#e1e1e1</color>
+</resources>

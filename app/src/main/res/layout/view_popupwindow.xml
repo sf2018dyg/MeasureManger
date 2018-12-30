@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlfPopup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+    <ListView
+        android:id="@+id/lvfChidlItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@null"
+        android:scrollbars="vertical"
+        android:scrollbarSize="2dp"
+        android:scrollbarFadeDuration="0"
+        android:fadeScrollbars="false"
+        android:overScrollMode="never" />
+</LinearLayout>

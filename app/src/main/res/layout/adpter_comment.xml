@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/com.pkmmte.view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_12">
+
+    <com.pkmmte.view.CircularImageView
+        android:id="@+id/ivhead"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/default_s"
+        app:selector="true"
+        app:selector_color="#4D000000"
+        app:selector_stroke_color="#16f5f5f5"
+        app:selector_stroke_width="8dp"
+        app:shadow="false" />
+
+    <TextView
+        android:id="@+id/txtname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/ivhead"
+        android:text="text"
+        android:textColor="@color/text"
+        android:textSize="12sp"
+        android:layout_marginLeft="@dimen/dp_12"/>
+
+    <TextView
+        android:id="@+id/txtlouceng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtname"
+        android:layout_below="@+id/txtname"
+        android:layout_marginStart="0dp"
+        android:text="0楼"
+        android:textColor="@color/text_prompt"
+        android:textSize="9sp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txtdot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtlouceng"
+        android:text="·"
+        android:textColor="@color/text_prompt"
+        android:textSize="9sp"
+        android:layout_below="@+id/txtname"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txthuifudate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/txtdot"
+        android:layout_alignStart="@+id/txtname"
+        android:text="01.12 00:00"
+        android:textColor="@color/text_prompt"
+        android:textSize="9sp"
+        android:layout_below="@+id/txtname"/>
+
+    <TextView
+        android:id="@+id/txtcomment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我是评论"
+        android:textColor="@color/text"
+        android:textSize="12sp"
+        android:layout_below="@+id/ivhead"
+        android:layout_marginTop="@dimen/dp_12"
+        android:maxLines="3"
+        android:lineSpacingMultiplier="1.5"
+        android:ellipsize="end"/>
+    
+    <TextView
+        android:id="@+id/txtclickhuifu"
+        android:layout_width="52dp"
+        android:layout_height="24dp"
+        android:background="@color/bg_normal_color"
+        android:layout_alignParentEnd="true"
+        android:text="回复"
+        android:textSize="12sp"
+        android:textColor="@color/text_prompt"
+        android:gravity="center"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/txtcomment"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@drawable/bg_dotted_line"
+        android:layerType="software"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlvcommentdetail"
+        android:layout_below="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

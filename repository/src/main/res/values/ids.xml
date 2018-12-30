@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <item type="id" name="knowledge_list_key"/>
+  <item type="id" name="isComment"/>
+  <item name="file_position" type="id"/>
+  <item name="file_viewholder" type="id"/>
+  <item name="position" type="id"/>
+  <item name="child_position" type="id"/>
+  <item name="item_object" type="id"/>
+  <item name="item_chile_object" type="id"/>
+  <item name="staff_image" type="id"/>
+  <item name="image_id" type="id"/>
+  <item name="jz_fullscreen_id" type="id"/>
+  <item name="jz_tiny_id" type="id"/>
+</resources>

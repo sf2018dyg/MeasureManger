@@ -1,0 +1,137 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:2:1-51:12
+INJECTED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:2:1-51:12
+INJECTED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:2:1-51:12
+	package
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:4:5-24
+		INJECTED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml
+		INJECTED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml
+	xmlns:tools
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:6:5-7:38
+INJECTED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:6:5-7:38
+INJECTED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:6:5-7:38
+INJECTED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:6:5-7:38
+INJECTED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:6:5-7:38
+	android:targetSdkVersion
+		INJECTED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:6:5-7:38
+		INJECTED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:7:9-35
+		INJECTED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml
+		INJECTED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml
+uses-permission#android.permission.BLUETOOTH
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:9:2-65
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:9:19-62
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:10:5-74
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:10:22-71
+uses-permission#android.permission.INTERNET
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:11:5-66
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:11:22-64
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:12:5-13:47
+	tools:ignore
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:13:9-44
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:12:22-81
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:14:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:15:2-73
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:15:19-70
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:16:2-73
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:16:19-70
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:17:2-72
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:17:19-69
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:18:2-78
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:18:19-75
+uses-permission#android.permission.CAMERA
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:19:2-62
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:19:19-59
+uses-permission#android.permission.READ_LOGS
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:20:2-21:47
+	tools:ignore
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:21:9-44
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:20:19-62
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:22:2-76
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:22:19-73
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:23:2-78
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:23:19-75
+uses-permission#android.permission.SET_DEBUG_APP
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:24:2-25:47
+	tools:ignore
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:25:9-44
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:24:19-66
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:26:2-75
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:26:19-72
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:27:2-68
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:27:19-65
+uses-permission#android.permission.USE_CREDENTIALS
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:28:2-71
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:28:19-68
+uses-permission#android.permission.MANAGE_ACCOUNTS
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:29:2-71
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:29:19-68
+application
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:31:5-49:19
+	android:supportsRtl
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:34:3-29
+	android:hardwareAccelerated
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:33:3-37
+	android:allowBackup
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:32:3-29
+meta-data#BUGLY_APPID
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:36:3-38:33
+	android:value
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:38:4-30
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:37:4-30
+meta-data#BUGLY_APP_VERSION
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:39:3-41:30
+	android:value
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:41:4-27
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:40:4-36
+meta-data#BUGLY_APP_CHANNEL
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:42:3-44:28
+	android:value
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:44:4-25
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:43:4-36
+meta-data#BUGLY_ENABLE_DEBUG
+ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:45:3-47:27
+	android:value
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:47:4-24
+	android:name
+		ADDED from F:\AndroidCode\As_workplace\MeasureManger\mjsdk\AndroidManifest.xml:46:4-37

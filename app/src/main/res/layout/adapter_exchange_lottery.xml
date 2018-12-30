@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_lottery_one"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:src="@mipmap/icn_anli"/>
+
+        <TextView
+            android:id="@+id/tv_lottery_one_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img_lottery_one"
+            android:layout_toEndOf="@+id/img_lottery_one"
+            android:layout_toRightOf="@+id/img_lottery_one"
+            android:textColor="@color/text" />
+
+        <TextView
+            android:id="@+id/tv_lottery_one_frequency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_lottery_one_name"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/img_lottery_one"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_work_points_one_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_lottery_one"
+            android:layout_toRightOf="@id/img_lottery_one"
+            android:textColor="@color/red"
+            android:textSize="10sp" />
+
+
+        <Button
+            android:id="@+id/bt_lottery_one"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/frame_round_red"
+            android:text="抽奖"
+            android:textColor="@color/red" />
+    </RelativeLayout>
+    <TextView style="@style/line_gray_style" />
+</LinearLayout>

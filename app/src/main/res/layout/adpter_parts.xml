@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/llfitem"
+        android:layout_width="71dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@drawable/button_jieshou_bg"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/imglogo"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:scaleType="fitCenter"
+            android:text="品牌"
+            android:gravity="center"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

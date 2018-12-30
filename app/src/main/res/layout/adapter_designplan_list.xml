@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_12"
+    android:paddingRight="@dimen/dp_12">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/bg_normal_color"
+        android:orientation="horizontal"
+        android:paddingBottom="14dp"
+        android:paddingTop="14dp">
+
+        <ImageView
+            android:id="@+id/ivStart"
+            android:layout_width="4dp"
+            android:layout_height="15sp"
+            android:background="@color/blue"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tvfDesignPlanName"
+            style="@style/text_15sp_black_style"
+            android:layout_marginLeft="8dp"
+            android:text="调整设计方案"
+            android:layout_toRightOf="@+id/ivStart"
+            android:layout_centerVertical="true"
+            android:maxWidth="180dp"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tvfDesignPlanTime"
+            style="@style/text_14sp_gray_style"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="2017-12-01 12:12"
+            android:layout_toRightOf="@+id/tvfDesignPlanName"
+            android:layout_alignBottom="@+id/tvfDesignPlanName"
+            android:layout_toLeftOf="@+id/tvfAuditStatus"/>
+        <TextView
+            android:id="@+id/tvfAuditStatus"
+            style="@style/text_15sp_gray_style"
+            android:textColor="@color/red"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvfDesignPics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/white_round_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/red" />
+
+            <TextView
+                style="@style/width_height_default"
+                android:layout_marginLeft="8dp"
+                android:text="个人目标"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_1"
+                style="@style/width_height_default"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="个人基本目标达成率" />
+
+            <TextView
+                android:id="@+id/tv_personal_target_complete_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@+id/tv_1"
+                android:textColor="@color/orange" />
+
+            <ProgressBar
+                android:id="@+id/progressbar_personal_target_complete_schedule"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_personal_target_complete_schedule"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:max="100"
+                android:progressDrawable="@drawable/progress_bar_drawable_personal" />
+
+            <TextView
+                android:id="@+id/start_amount_personal_target_complete_schedule"
+                style="@style/width_height_default"
+                android:layout_alignLeft="@+id/progressbar_personal_target_complete_schedule"
+                android:layout_alignStart="@+id/progressbar_personal_target_complete_schedule"
+                android:layout_below="@+id/progressbar_personal_target_complete_schedule"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/end_amount_personal_target_complete_schedule"
+                style="@style/width_height_default"
+                android:layout_alignEnd="@+id/progressbar_personal_target_complete_schedule"
+                android:layout_alignRight="@+id/progressbar_personal_target_complete_schedule"
+                android:layout_below="@+id/progressbar_personal_target_complete_schedule"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/tv_2"
+                style="@style/width_height_default"
+                android:layout_below="@+id/end_amount_personal_target_complete_schedule"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="个人优秀目标达成率" />
+
+            <TextView
+                android:id="@+id/tv_personal_excellent_target_complete_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/end_amount_personal_target_complete_schedule"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@+id/tv_2"
+                android:textColor="@color/orange" />
+
+            <ProgressBar
+                android:id="@+id/progressbar_personal_excellent_target_complete_schedule"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_2"
+                android:layout_alignStart="@+id/tv_2"
+                android:layout_marginRight="16dp"
+                android:layout_below="@+id/tv_personal_excellent_target_complete_schedule"
+                android:max="100"
+                android:progressDrawable="@drawable/progress_bar_drawable_personal" />
+
+            <TextView
+                android:id="@+id/start_amount_personal_excellent_target_complete_schedule"
+                style="@style/width_height_default"
+                android:layout_alignLeft="@+id/progressbar_personal_excellent_target_complete_schedule"
+                android:layout_alignStart="@+id/progressbar_personal_excellent_target_complete_schedule"
+                android:layout_below="@+id/progressbar_personal_excellent_target_complete_schedule"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/end_amount_personal_excellent_target_complete_schedule"
+                style="@style/width_height_default"
+                android:layout_alignEnd="@+id/progressbar_personal_excellent_target_complete_schedule"
+                android:layout_alignRight="@+id/progressbar_personal_excellent_target_complete_schedule"
+                android:layout_below="@+id/progressbar_personal_excellent_target_complete_schedule"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/red" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/white_round_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/red" />
+
+            <TextView
+                style="@style/width_height_default"
+                android:layout_marginLeft="8dp"
+                android:text="门店目标"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_3"
+                style="@style/width_height_default"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="门店基本目标达成率" />
+
+            <TextView
+                android:id="@+id/tv_store_target_complete_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@+id/tv_3"
+                android:textColor="@color/orange" />
+
+            <ProgressBar
+                android:id="@+id/progressbar_store_target_complete_schedule"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_store_target_complete_schedule"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:max="100"
+                android:progressDrawable="@drawable/progress_bar_drawable_personal" />
+
+            <TextView
+                android:id="@+id/start_amount_store_target_complete_schedule"
+                style="@style/width_height_default"
+                android:layout_alignLeft="@+id/progressbar_store_target_complete_schedule"
+                android:layout_alignStart="@+id/progressbar_store_target_complete_schedule"
+                android:layout_below="@+id/progressbar_store_target_complete_schedule"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/end_amount_store_target_complete_schedule"
+                style="@style/width_height_default"
+                android:layout_alignEnd="@+id/progressbar_store_target_complete_schedule"
+                android:layout_alignRight="@+id/progressbar_store_target_complete_schedule"
+                android:layout_below="@+id/progressbar_store_target_complete_schedule"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/tv_4"
+                style="@style/width_height_default"
+                android:layout_below="@+id/end_amount_store_target_complete_schedule"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="门店优秀目标达成率" />
+
+            <TextView
+                android:id="@+id/tv_store_excellent_target_complete_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/end_amount_store_target_complete_schedule"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@+id/tv_4"
+                android:textColor="@color/orange" />
+
+            <ProgressBar
+                android:id="@+id/progressbar_store_excellent_target_complete_schedule"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_4"
+                android:layout_alignStart="@+id/tv_4"
+                android:layout_marginRight="16dp"
+                android:layout_below="@+id/tv_store_excellent_target_complete_schedule"
+                android:max="100"
+                android:progressDrawable="@drawable/progress_bar_drawable_personal" />
+
+            <TextView
+                android:id="@+id/start_amount_store_excellent_target_complete_schedule"
+                style="@style/width_height_default"
+                android:layout_alignLeft="@+id/progressbar_store_excellent_target_complete_schedule"
+                android:layout_alignStart="@+id/progressbar_store_excellent_target_complete_schedule"
+                android:layout_below="@+id/progressbar_store_excellent_target_complete_schedule"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/end_amount_store_excellent_target_complete_schedule"
+                style="@style/width_height_default"
+                android:layout_alignEnd="@+id/progressbar_store_excellent_target_complete_schedule"
+                android:layout_alignRight="@+id/progressbar_store_excellent_target_complete_schedule"
+                android:layout_below="@+id/progressbar_store_excellent_target_complete_schedule"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/red" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.soonfor.measuremanager">
+
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Required 极光 -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 极光end -->
+    <application
+        android:name=".SoonforApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="d2de356239775811de6dd34778acbb74" />
+
+        <activity
+            android:name=".home.login.activity.StartActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/StartTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home.login.activity.LoginActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.login.activity.ForgetPasswordActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".home.login.activity.ServerSettingsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".home.login.activity.CustomScanAct"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".home.main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <!-- 抢任务 -->
+        <!--<activity-->
+        <!--android:name=".home.grab.activity.GrabOrderMainActivity"-->
+        <!--android:screenOrientation="sensorPortrait"-->
+        <!--android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />-->
+        <!-- 抢单池 -->
+        <activity
+            android:name=".home.grab.activity.GrabPondActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <!-- 量尺 -->
+        <activity
+            android:name=".home.liangchi.activity.LiangChiMainActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".home.liangchi.activity.LiangChiDetailActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".home.liangchi.activity.ConfirmationReservationActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <!-- 设计 -->
+        <activity
+            android:name=".home.design.activity.DesignMainActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.design.activity.DesignDetailActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <!-- 复尺 -->
+        <activity
+            android:name=".home.complexruler.activity.FuChiMainActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".home.complexruler.activity.FuChiDetailActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".home.complexruler.activity.ConfirmationReservationActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.liangchi.activity.LiangChiImmediatelyActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.liangchi.activity.LiangChiLookDetailActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.liangchi.activity.ApartmentLayoutActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.liangchi.activity.SurveyListActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.liangchi.activity.DesignSchemeActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <!-- 放样 -->
+        <activity
+            android:name=".home.lofting.activity.LoftingMainActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.lofting.activity.LoftingDetailActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.lofting.activity.ConfimAppointActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.lofting.activity.immloft.ImmediateLoftingActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".home.lofting.activity.immloft.LoftLookDetailActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".home.lofting.activity.immloft.detail.mj_sdk.LoftListFirstActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.lofting.activity.immloft.detail.mj_sdk.LoftListSecondActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.lofting.activity.immloft.detail.mj_sdk.EditLfMemberActivity"
+            android:theme="@style/activity_full_transpatent_style"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.lofting.activity.immloft.detail.mj_sdk.ShowLfMemberActivity"
+            android:theme="@style/activity_full_transpatent_style"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.lofting.activity.immloft.detail.LookSurveyListActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".home.homepage.activity.DesignReTieActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.homepage.activity.DesignReTieDetailActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".mjsdk.SdkLoftingActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <!-- 其它任务 -->
+        <activity
+            android:name=".home.othertask.activity.OtherTaskMainActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.othertask.activity.OtherTaskDetailActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".home.othertask.activity.UpdateTaskResultActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".home.othertask.activity.EditCustomerProfileActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!-- 灵感 -->
+        <activity
+            android:name=".afflatus.activity.SparePartsDetailActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".afflatus.activity.TintplateDetailActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".afflatus.activity.DesignCaseDetailActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <!-- 我的 -->
+        <activity
+            android:name=".me.activity.SettingActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".me.activity.AboutUsActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".me.activity.PersonalDataActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".me.activity.QrCodeActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".me.activity.WorkPointsCenterActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".me.activity.MyPerformanceActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".me.activity.HistoryPerformanceActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".me.activity.MonthPerformanceActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".me.activity.SalesTargetActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".me.activity.PrizeRuleActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".me.activity.MyGrowthActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".me.activity.my_information.MyInformationActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".me.activity.ModifyPawActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".view.previewImage.ImageVAty"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".me.activity.my_information.AnnouncementDetailActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".me.activity.MyCardActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".me.activity.MycaseActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".me.activity.MyFavoriteActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".me.activity.MyAttentionActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name="com.soonfor.evaluate.activity.Evaluate_CustomersToMeActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name="com.soonfor.evaluate.activity.Evaluate_CustomersToMeDetailActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name="com.soonfor.evaluate.activity.Evaluate_IToCustomersActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name="com.soonfor.evaluate.activity.Evaluate_IToCustomersDetailActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name="com.soonfor.evaluate.activity.EvaluateRankingActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="com.soonfor.evaluate.activity.EvaluateCustomersActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="com.soonfor.evaluate.activity.ReplyActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="com.soonfor.updateutil.ShowPicActivity"
+            android:screenOrientation="sensorPortrait" />
+        <!-- mjsdk -->
+        <activity
+            android:name=".mjsdk.SurveyActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".home.liangchi.activity.ScenePictureActivity"
+            android:screenOrientation="sensorPortrait" />
+        <activity
+            android:name=".upload.activity.SelectCaseActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+
+        <activity android:name=".home.order.PreOrderActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity android:name=".home.order.OrderDetailActivity"
+            android:screenOrientation="sensorPortrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"
+            />
+
+        <!-- for AndroidN -->
+        <activity android:name="com.jiamm.imagenote.JMMImgNoteActivity"
+            android:screenOrientation="portrait"/>
+        <service
+            android:name="com.jiamm.bluetooth.ACSUtilityService"
+            android:enabled="true" >
+        </service>
+
+        <!-- mjsdk -->
+        <provider
+            android:name="cn.jiamm.lib.JMMFileProvider"
+            android:authorities="com.soonfor.measuremanager.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/mj_file_paths" />
+        </provider>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/ps_file_paths" />
+        </provider>
+
+        <provider
+            android:name="com.soonfor.updateutil.UpdateFileProvider"
+            android:authorities="com.soonfor.measuremanager.myfileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider" />
+        </provider>
+    </application>
+
+</manifest>

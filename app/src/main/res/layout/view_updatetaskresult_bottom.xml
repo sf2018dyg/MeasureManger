@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <com.soonfor.measuremanager.view.Utiliew
+        android:id="@+id/util_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        android:background="@color/bg_color"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_10"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="@dimen/dp_16"
+            android:background="@color/blue"
+            android:layout_marginRight="@dimen/dp_6"
+            android:layout_marginTop="@dimen/dp_2"/>
+
+        <TextView
+            style="@style/text_15sp_black_style"
+            android:text="客户再销售商机报备" />
+
+        <TextView
+            style="@style/text_13sp_black_style"
+            android:text="（报备商机即可获得" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_14"
+            android:layout_height="@dimen/dp_14"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp_2"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:src="@mipmap/score" />
+
+        <TextView
+            style="@style/text_13sp_black_style"
+            android:text="15积分"
+            android:textColor="#e47878" />
+
+        <TextView
+            style="@style/text_13sp_black_style"
+            android:text="）" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etfInputSj"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:hint="是否有了解到客户有新的销售商机？如有，请填写相关情况"
+        android:textSize="14sp"
+        android:gravity="left|top"
+        android:padding="@dimen/dp_6"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@null"/>
+</LinearLayout>

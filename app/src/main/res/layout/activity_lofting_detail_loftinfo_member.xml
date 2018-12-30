@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#88000000">
+    <ImageView
+        android:id="@+id/imgfTranslucence"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000" />
+
+    <LinearLayout
+        android:id="@+id/llfBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvfTitle"
+                style="@style/text_15sp_black_style"
+                android:text="放样" />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_13sp_gray_style"
+                    android:layout_gravity="center"
+                    android:text="伸靠关系：" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/bg_dotted_line"
+                android:layerType="software" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/text_13sp_gray_style"
+                    android:layout_height="wrap_content"
+                    android:text="现场放样尺寸-宽" />
+
+                <TextView
+                    android:id="@+id/etfActWith"
+                    style="@style/text_13sp_red_style"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp" />
+                <TextView
+                    style="@style/text_13sp_black_style"
+                    android:text="mm" />
+
+                <TextView
+                    style="@style/text_13sp_gray_style"
+                    android:text="与图纸放样尺寸相差" />
+
+                <TextView
+                    android:id="@+id/tvfWithSize"
+                    style="@style/text_13sp_gray_style"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:maxWidth="40dp"
+                    android:text=""
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/tvfWithUnit"
+                    style="@style/text_13sp_black_style"
+                    android:text="mm" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/bg_dotted_line"
+                android:layerType="software" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/text_13sp_gray_style"
+                    android:text="现场放样尺寸-高" />
+
+                <TextView
+                    android:id="@+id/etfActHeight"
+                    style="@style/text_13sp_red_style"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp" />
+                <TextView
+                    style="@style/text_13sp_black_style"
+                    android:text="mm" />
+                <TextView
+                    style="@style/text_13sp_gray_style"
+                    android:text="与图纸放样尺寸相差" />
+
+                <TextView
+                    android:id="@+id/tvfheightSize"
+                    style="@style/text_13sp_gray_style"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:maxWidth="40dp"
+                    android:text=""
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/tvfheightUnit"
+                    style="@style/text_13sp_black_style"
+                    android:text="mm" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/bg_dotted_line"
+                android:layerType="software" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/text_13sp_gray_style"
+                    android:text="现场放样尺寸-厚" />
+
+                <TextView
+                    android:id="@+id/etfActDeep"
+                    style="@style/text_13sp_red_style"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp" />
+                <TextView
+                    style="@style/text_13sp_black_style"
+                    android:text="mm" />
+                <TextView
+                    style="@style/text_13sp_gray_style"
+                    android:text="与图纸放样尺寸相差" />
+
+                <TextView
+                    android:id="@+id/tvfdeepSize"
+                    style="@style/text_13sp_gray_style"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:maxWidth="40dp"
+                    android:text=""
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/tvfdeepUnit"
+                    style="@style/text_13sp_black_style"
+                    android:text="mm" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/bg_dotted_line"
+                android:layerType="software" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:layout_marginTop="@dimen/dp_12"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_13sp_gray_style"
+                    android:text="放样说明：" />
+
+                <TextView
+                    android:id="@+id/tvfRemark"
+                    style="@style/text_13sp_black_style"
+                    android:height="100dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llfReturn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#8C9AA5"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_15sp_white_style"
+                android:text="返回" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

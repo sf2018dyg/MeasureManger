@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/brown"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/arrow_left_white" />
+
+            <View
+                android:layout_width="0.6dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/text_prompt" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="我的客户"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_all"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/rg_selector_status"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="所有"
+                android:textColor="@drawable/rb_text_selector"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rb_potential"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/rg_selector_status"
+                android:button="@null"
+                android:gravity="center"
+                android:text="潜客"
+                android:textColor="@drawable/rb_text_selector"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rb_wait_line"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/rg_selector_status"
+                android:button="@null"
+                android:gravity="center"
+                android:text="待量尺"
+                android:textColor="@drawable/rb_text_selector"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rb_wait_decide"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/rg_selector_status"
+                android:button="@null"
+                android:gravity="center"
+                android:text="待设计"
+                android:textColor="@drawable/rb_text_selector"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_down"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/arrow_down" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                style="@style/small_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:visibility="gone"/>
+        </RadioGroup>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/view_choose"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_10">
+
+    <RelativeLayout
+        android:id="@+id/rlfhead"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/gray"
+        android:gravity="center_vertical"
+       >
+
+        <TextView
+            android:id="@+id/tvfHeadtxt"
+            style="@style/text_15sp_black_style"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/imgfHeadShow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/dp_12"
+            android:src="@mipmap/icon_down" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llfChildContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlfhead"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlviewChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:id="@+id/llfTrunkingPics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_6"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/text_14sp_black_style"
+                    android:layout_gravity="center"
+                    android:ems="1"
+                    android:text="现场照片" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="@drawable/bg_round_corner"
+                    android:padding="@dimen/dp_12">
+
+                    <com.lzy.ninegrid.NineGridView
+                        android:id="@+id/ngfLoftingPhotos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:ngv_gridSpacing="8dp"
+                        app:ngv_maxSize="3"
+                        app:ngv_mode="grid"
+                        app:ngv_singleImageSize="100dp" />
+                </RelativeLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:background="@color/c7c7c7"
+                android:visibility="gone"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvfNoFyPics"
+                    style="@style/text_14sp_black_style"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:text="此墙面没有放样照片"
+                    android:visibility="gone">
+                </TextView>
+                <LinearLayout
+                    android:id="@+id/llfFyPics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+                    <TextView
+                        style="@style/text_14sp_black_style"
+                        android:layout_gravity="center"
+                        android:ems="1"
+                        android:text="放样照片" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_round_corner"
+                        android:padding="@dimen/dp_12">
+
+                        <com.lzy.ninegrid.NineGridView
+                            android:id="@+id/ngfLoftingDrawings"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:ngv_gridSpacing="8dp"
+                            app:ngv_maxSize="3"
+                            app:ngv_mode="grid"
+                            app:ngv_singleImageSize="100dp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+   <LinearLayout
+       android:id="@+id/llfchild"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="@dimen/dp_12"
+       android:layout_marginBottom="@dimen/dp_12"
+       android:background="@color/white"
+       android:gravity="center_vertical"
+       android:orientation="horizontal"
+       >
+
+       <ImageView
+           android:layout_width="@dimen/dp_2"
+           android:layout_height="13dp"
+           android:src="@color/sjcolor"
+           android:layout_marginLeft="@dimen/dp_12"
+           android:layout_marginTop="2dp"
+           android:layout_gravity="top"/>
+
+       <TextView
+           android:id="@+id/goodnametxt"
+           style="@style/text_12sp_gray_style"
+           android:layout_height="wrap_content"
+           android:layout_width="60dp"
+           android:layout_gravity="top"
+           android:gravity="left"
+           android:text="主卧室"
+           android:layout_marginLeft="@dimen/dp_10"
+           android:maxLines="2"
+           android:ellipsize="end"
+           />
+
+       <TextView
+           android:id="@+id/goodsizetxt"
+           style="@style/text_12sp_gray_style"
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:text="800mm"
+           android:layout_gravity="top"
+           android:layout_marginRight="@dimen/dp_12"
+           android:layout_marginLeft="@dimen/dp_10"
+           />
+   </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/bg_dotted_line"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_12"
+        android:layerType="software"/>
+</LinearLayout>

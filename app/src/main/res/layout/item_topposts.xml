@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/rlitem">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_alignTop="@+id/imgpath"
+        android:layout_alignBottom="@+id/imgpath"
+        android:layout_toStartOf="@+id/imgpath">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/text_13sp_black_style"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="腾出更多空间腾出更多空间腾出更多空间腾出更多空间腾出更多空间腾出更多空间腾出更多空间腾出" />
+
+        <TextView
+            android:id="@+id/author"
+            style="@style/TopPostsDesc"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:text="冯小宝"
+            android:layout_marginTop="@dimen/dp_5" />
+
+        <TextView
+            style="@style/TopPostsDesc"
+            android:id="@+id/readingVolume"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:drawableLeft="@mipmap/icn_good"
+            android:drawablePadding="@dimen/dp_2"
+            android:text="200"
+            android:layout_marginRight="@dimen/dp_12" />
+
+    </RelativeLayout>
+
+    <com.soonfor.measuremanager.view.RoundJiaoImageView
+        android:id="@+id/imgpath"
+        android:layout_width="120dp"
+        android:layout_height="75dp"
+        android:layout_margin="12dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/zanuw"
+        android:layout_alignParentEnd="true"
+        app:typee="round"/>
+    
+    <View
+        android:id="@+id/lines"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/line"
+        android:layout_below="@+id/imgpath"
+        android:layout_marginRight="@dimen/dp_12"
+        android:layout_marginLeft="@dimen/dp_12"/>
+</RelativeLayout>

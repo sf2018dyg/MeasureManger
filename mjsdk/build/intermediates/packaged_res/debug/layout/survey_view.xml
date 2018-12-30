@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+        
+    <cn.jiamm.lib.JMMView
+        android:id="@+id/m_JiaMMView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </cn.jiamm.lib.JMMView>
+    <LinearLayout
+        android:id="@+id/lofting_view"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="#ff0000"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/lofting_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#495862"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="退出放样列表"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+    
+</RelativeLayout>

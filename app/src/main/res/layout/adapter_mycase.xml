@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llTotal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlfItem"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@color/white">
+
+        <com.soonfor.measuremanager.view.RoundJiaoImageView
+            android:id="@+id/imgpath"
+            android:layout_width="120dp"
+            android:layout_height="75dp"
+            android:layout_margin="12dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/zanuw"
+            app:typee="round" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imgpath"
+            android:layout_alignTop="@+id/imgpath"
+            android:layout_marginRight="@dimen/dp_12"
+            android:layout_toRightOf="@+id/imgpath">
+
+            <TextView
+                android:id="@+id/tvfCaseName"
+                style="@style/text_13sp_black_style"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:singleLine="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvfCaseName">
+
+                <TextView
+                    android:id="@+id/tvfCase_date"
+                    style="@style/TopPostsDesc"
+                    android:layout_alignBottom="@+id/tvfCase_building"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="@dimen/dp_6" />
+
+                <TextView
+                    android:id="@+id/tvfCase_building"
+                    style="@style/TopPostsDesc"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/tvfCase_date"
+                    android:ellipsize="end"
+                    android:maxLines="2" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvfReadingNum"
+                        style="@style/TopPostsDesc"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:drawableLeft="@mipmap/icon_eye"
+                        android:drawablePadding="@dimen/dp_2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvfComment"
+                        style="@style/TopPostsDesc"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:drawableLeft="@mipmap/icn_pinglun"
+                        android:drawablePadding="@dimen/dp_2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvfLike"
+                        style="@style/TopPostsDesc"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/dp_12"
+                        android:drawableLeft="@mipmap/icn_good"
+                        android:drawablePadding="@dimen/dp_2" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/showSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:id="@+id/imgpick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@mipmap/icn_pick" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/imgpick"
+                android:background="#fd0d29"></View>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:background="@color/mjsdk_common_main_white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="选择图片方式"
+        android:textColor="@color/mjsdk_ligth_blue"
+        android:textSize="@dimen/mjsdk_common_font_biger"
+        android:gravity="center"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mjsdk_ligth_blue"/>
+    <TextView
+        android:id="@+id/mjsdk_select_new_photo_from_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mjsdk_common_font_normal"
+        android:textSize="@dimen/mjsdk_common_font_big"
+        android:paddingTop="30dp"
+        android:paddingBottom="15dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="拍摄新照片"/>
+    <TextView
+        android:id="@+id/mjsdk_select_new_photo_from_album"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mjsdk_common_font_normal"
+        android:textSize="@dimen/mjsdk_common_font_big"
+        android:paddingTop="15dp"
+        android:paddingBottom="30dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="从相册选取"/>
+</LinearLayout>

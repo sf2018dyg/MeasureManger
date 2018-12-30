@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llfTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <include layout="@layout/view_qui_title_layout" />
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlfBottom"
+        android:layout_below="@+id/llfTop"
+        android:background="@color/bg_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llfTop"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.qmuiteam.qmui.widget.QMUIEmptyView
+                android:id="@+id/empty_layout"
+                android:layout_width="240dp"
+                android:layout_height="match_parent"
+                android:background="@color/bg_color"
+                android:layout_centerHorizontal="true"
+                app:qmui_detail_text="暂无收藏的知识" />
+        </RelativeLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlfBottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/cb_fullCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:text="全选"
+            android:padding="@dimen/dp_12"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:layout_alignParentStart="true"
+            android:checked="false"
+            style="@style/CustomCheckBoxTheme"/>
+
+        <Button
+            android:id="@+id/bt_delFavorite"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="match_parent"
+            android:background="@color/red"
+            android:layout_alignParentEnd="true"
+            android:text="删除"
+            android:textSize="15sp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+</RelativeLayout>

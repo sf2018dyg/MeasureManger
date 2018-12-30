@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 顶栏灰色-->
+    <color name="colorPrimary">#666666</color>
+    <color name="colorPrimaryDark">#666666</color>
+    <color name="colorAccent">#999999</color>
+    <color name="white">#fff</color>
+    <color name="transparent">#00000000</color>
+    <color name="bg_color">#f2f2f2</color>
+    <color name="main_color">#2bb14c</color>
+    <color name="text">#333333</color>
+    <color name="text_prompt">#888888</color>
+    <color name="subtitle">#666666</color>
+    <color name="orange">#fe8224</color>
+    <color name="line">#e1e1e1</color>
+    <color name="caveat">#ff4500</color>
+    <color name="text_red">#ed423a</color>
+    <color name="red">#ed423a</color>
+    <color name="black">#000000</color>
+    <color name="green">#28ce33</color>
+    <color name="blue">#1198fb</color>
+    <color name="brown">#383635</color>
+    <color name="gray">#cccccc</color>
+    <color name="gray2">#8b99a4</color>
+    <color name="text_bule">#0599fd</color>
+    <color name="space_line">#ededed</color>
+    <color name="text_darkbule">#0000FF</color>
+    <color name="yellow">#fff000</color>
+
+    <color name="bg_normal_color">#f0f0f0</color>
+    <color name="c7c7c7">#d7d7d7</color>
+    <color name="dark">#cccccc</color>
+    <color name="light_orange">#fdf9f3</color>
+
+    <color name="half_black">#66232323</color>
+    <color name="half_orange">#fdf9f3</color>
+
+    <!--stepview -->
+    <color name="uncompleted_color">#A3E0D9</color>
+    <color name="uncompleted_text_color">#F8F8F8</color>
+    <color name="light_blue">#8B9CAC</color>
+    <color name="lightOrange">#FF6600</color>
+
+    <color name="lccolor">#eb433a</color>
+    <color name="lccoloradpter">#febbb3</color>
+    <color name="sjcoloradpter">#aadbfd</color>
+    <color name="sjcolor">#0599fd</color>
+    <color name="fccolor">#2dcf2c</color>
+    <color name="fccoloradpter">#a0f69f</color>
+    <color name="fycolor">#ff8321</color>
+    <color name="fycoloradpter">#fdd0ad</color>
+    <color name="btn_jsbg">#8c9aa5</color>
+    <color name="text_cyan">#336699</color>
+    <color name="searchboxbg">#f7f7f7</color>
+    <color name="lunboshardow">#66333000</color>
+
+    <color name="portrait1">#ff9933</color>
+    <color name="portrait2">#40d98c</color>
+    <color name="portrait3">#80c8e2</color>
+    <color name="portrait4">#cee478</color>
+    <color name="portrait5">#788ae4</color>
+    <color name="portrait6">#ba78e4</color>
+    <color name="portrait7">#e478db</color>
+    <color name="portrait8">#e478a6</color>
+    <color name="portrait9">#e47878</color>
+</resources>
